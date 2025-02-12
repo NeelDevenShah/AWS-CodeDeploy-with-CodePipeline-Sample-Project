@@ -3,7 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing dependencies (if any)
+      - echo Installing dependencies if any  # Removed parentheses
+      # OR, if you want to keep the parentheses, use quotes:
+      # - echo "Installing dependencies (if any)"
   pre_build:
     commands:
       - echo Pre-build phase (e.g., linting, testing)
@@ -16,5 +18,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - '**/*'  # Include all files
-  base-directory: . #  Crucial:  Dot means files are at the root
+    - '**/*'
+  base-directory: .
