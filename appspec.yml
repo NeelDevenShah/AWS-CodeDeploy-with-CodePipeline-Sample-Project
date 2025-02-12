@@ -5,10 +5,14 @@ files:
     destination: /var/www/html
 hooks:
   AfterInstall:
-    - location: scripts/insall_nginx.sh
+    - location: scripts/install_nginx.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/start_nginx.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/start_nginx.sh
+    - location: scripts/stop_nginx.sh
       timeout: 300
       runas: root

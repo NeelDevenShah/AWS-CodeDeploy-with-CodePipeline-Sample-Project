@@ -3,10 +3,10 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing dependencies
+      - echo Installing dependencies (if any)
   pre_build:
     commands:
-      - echo Pre-build phase
+      - echo Pre-build phase (e.g., linting, testing)
   build:
     commands:
       - echo Build started on `date`
@@ -16,5 +16,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - '**/*'
-  base-directory: 'path/to/your/html/files'
+    - '**/*'  # Include all files
+  base-directory: . #  Crucial:  Dot means files are at the root
