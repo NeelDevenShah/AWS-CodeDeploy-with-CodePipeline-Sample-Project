@@ -3,12 +3,10 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing dependencies if any  # Removed parentheses
-      # OR, if you want to keep the parentheses, use quotes:
-      # - echo "Installing dependencies (if any)"
+      - echo Installing dependencies if any
   pre_build:
     commands:
-      - echo Pre-build phase (e.g., linting, testing)
+      - echo Pre-build phase
   build:
     commands:
       - echo Build started on `date`
